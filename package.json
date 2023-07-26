@@ -1,0 +1,45 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "name": "fullstack-open-osa-9-tehtavat-9.1-9.7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "npm run calculateBmi": "ts-node bmiCalculator.ts",
+    "npm run calculateExercises": "ts-node exerciseCalculator.ts",
+    "calculateBmi": "node bmiCalculator.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ts-node": "ts-node",
+    "calculate": "ts-node exerciseCalculator.ts",
+    "bmiCalc": "ts-node bmiCalculator.ts"
+
+
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.3",
+    "@types/lodash": "^4.14.196",
+    "@types/mongoose": "^5.11.97",
+    "@types/react": "^18.2.16",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}
