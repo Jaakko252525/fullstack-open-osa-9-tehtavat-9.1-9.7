@@ -55,23 +55,56 @@ export const calculateExercises = (dailyHours: number[], dailyTarget: number) =>
     if ( performance >= 0.9 ) {
         console.log('rating 3', performance);
         const rating = 3;
-        return ` Number of days ${days}\n Number of training days ${trainingDays}\n Training target value per day: ${dailyTarget}\n Calculated average time ${averageHoursPerDay}\n Was target reached: ${isTargetMet}\n Rating for performance ${rating}\n Explanation for ratingsystem ${ratingExplanation}`;
+        const object = {
+            'Number of days': days,
+            'Number of training days': trainingDays,
+            'Training target value per day': dailyTarget,
+            'Calculated average time': averageHoursPerDay,
+            'Was target reached': isTargetMet,
+            'Rating for performance': rating,
+            'Explanation for ratingsystem': ratingExplanation};
+
+        return object;
 
     }
     else if ( performance < 0.9 && performance >= 0.7) {
         const rating = 2;
-        return ` Number of days ${days}\n Number of training days ${trainingDays}\n Training target value per day: ${dailyTarget}\n Calculated average time ${averageHoursPerDay}\n Was target reached: ${isTargetMet}\n Rating for performance ${rating}\n Explanation for ratingsystem ${ratingExplanation}`;
+        const object = {
+            'Number of days': days,
+            'Number of training days': trainingDays,
+            'Training target value per day': dailyTarget,
+            'Calculated average time': averageHoursPerDay,
+            'Was target reached': isTargetMet,
+            'Rating for performance': rating,
+            'Explanation for ratingsystem': ratingExplanation};
 
+        return object;
     }
     else if ( performance < 0.7 && performance >= 0.4) {
         const rating = 1;    
-        return ` Number of days ${days}\n Number of training days ${trainingDays}\n Training target value per day: ${dailyTarget}\n Calculated average time ${averageHoursPerDay}\n Was target reached: ${isTargetMet}\n Rating for performance ${rating}\n Explanation for ratingsystem ${ratingExplanation}`;
+        const object = {
+            'Number of days': days,
+            'Number of training days': trainingDays,
+            'Training target value per day': dailyTarget,
+            'Calculated average time': averageHoursPerDay,
+            'Was target reached': isTargetMet,
+            'Rating for performance': rating,
+            'Explanation for ratingsystem': ratingExplanation};
 
+        return object;
     }
     else if ( performance < 0.4) {
         const rating = 0;
-        return ` Number of days ${days}\n Number of training days ${trainingDays}\n Training target value per day: ${dailyTarget}\n Calculated average time ${averageHoursPerDay}\n Was target reached: ${isTargetMet}\n Rating for performance ${rating}\n Explanation for ratingsystem ${ratingExplanation}`;
+        const object = {
+            'Number of days': days,
+            'Number of training days': trainingDays,
+            'Training target value per day': dailyTarget,
+            'Calculated average time': averageHoursPerDay,
+            'Was target reached': isTargetMet,
+            'Rating for performance': rating,
+            'Explanation for ratingsystem': ratingExplanation};
 
+        return object;
     }
     else return null;
 
