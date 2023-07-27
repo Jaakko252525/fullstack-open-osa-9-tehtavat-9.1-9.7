@@ -43,7 +43,6 @@ app.post('/calculateExercise/:dailyHours/:target', (req, res) => {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment 
   
 
-    console.log('params', req.params);
     // splitting dailyHours in a array
     const array = req.params.dailyHours.split(',');
     // converting array of string to number
@@ -51,9 +50,17 @@ app.post('/calculateExercise/:dailyHours/:target', (req, res) => {
   
     // target to variable
     const target = parseInt(req.params.target);
-
+    try {
     const result = calculateExercises(numberArray, target);
     res.send(result);
+  } catch (error) {
+    console.error({
+      error: "parameter missing"
+    });
+    res.status(500).json({ error: 'An error occurred while calculating exercises.' });
+  }
+
+
   });
 
 
